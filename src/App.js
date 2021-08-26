@@ -5,16 +5,16 @@ import { getVisibleTodos } from "./redux/filter";
 import { fetchTodos } from "./redux/todos/action";
 import "./index.css";
 import { useEffect } from "react";
-import { Container, Box, makeStyles} from "@material-ui/core";
+import { Container, Box, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((them) => ({
   todoContainer: {
     marginTop: "20%",
-    borderRadius:'25px',
+    borderRadius: "25px",
     padding: "20px",
     webkitBoxShadow: "-2px 3px 38px -2px rgba(27, 135, 217, 0.39)",
     boxShadow: "-2px 3px 38px -2px rgba(27, 135, 217, 0.39)",
-  }
+  },
 }));
 
 export const App = () => {
@@ -23,7 +23,7 @@ export const App = () => {
   const filter = useSelector((state) => state.visibilityFilter);
   const todos = useSelector((state) => state.todos);
 
-   const visibleTodos = getVisibleTodos(todos, filter);
+  const visibleTodos = getVisibleTodos(todos, filter);
 
   useEffect(() => {
     dispatch(fetchTodos());
