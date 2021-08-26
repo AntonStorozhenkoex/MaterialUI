@@ -18,11 +18,17 @@ const useStyles = makeStyles((them) => ({
     done:{
         textDecoration:"line-through",
         color:'grey',
-        display:'inline-block'
+        display:'inline-block',
+        padding: '10px 10px 10px 5px',
+        width: '70%',
+        height: '100%'
     },
     notDone:{
         color:"black",
-        display:"inline-block"
+        display:"inline-block",
+        padding: '10px 10px 10px 5px',
+        width: '70%',
+        height: '100%'
     }
 }))
 

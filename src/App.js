@@ -10,6 +10,7 @@ import { Container, Box, makeStyles} from "@material-ui/core";
 const useStyles = makeStyles((them) => ({
   todoContainer: {
     marginTop: "20%",
+    borderRadius:'25px',
     padding: "20px",
     webkitBoxShadow: "-2px 3px 38px -2px rgba(27, 135, 217, 0.39)",
     boxShadow: "-2px 3px 38px -2px rgba(27, 135, 217, 0.39)",
