@@ -7,15 +7,24 @@ import {
 import { useDispatch } from "react-redux";
 import { deleteAllTodo } from "../../redux/todos/action";
 import { changeFilterAction } from "../../redux/filter/action";
-import { Button, Grid } from "@material-ui/core";
+import {Button, Grid, makeStyles} from "@material-ui/core";
 
+const  useStyles = makeStyles((them)=>({
+  footerButton:{
+    padding:'3px 3px 3px 3px',
+    width:'100px',
+    marginBottom:'10px',
+    height:'30px'
+  }
+}))
 export const Footer = ({ filter }) => {
+  const classes = useStyles()
   const dispatch = useDispatch();
   return (
     <footer>
       <Grid container>
         <Grid item xs={12} sm={3} md={3} lg={3} xl={3}>
-          <Button
+          <Button className={classes.footerButton}
             size="small"
             variant="contained"
             color="secondary"
@@ -27,7 +36,7 @@ export const Footer = ({ filter }) => {
           </Button>
         </Grid>
         <Grid item xs={12} sm={3} md={3} lg={3} xl={3}>
-          <Button
+          <Button className={classes.footerButton}
             variant="contained"
             size="small"
             color="primary"
@@ -37,7 +46,7 @@ export const Footer = ({ filter }) => {
           </Button>
         </Grid>
         <Grid item xs={12} sm={3} md={3} lg={3} xl={3}>
-          <Button
+          <Button className={classes.footerButton}
             variant="contained"
             size="small"
             color="primary"
@@ -47,7 +56,7 @@ export const Footer = ({ filter }) => {
           </Button>
         </Grid>
         <Grid item xs={12} sm={3} md={3} lg={3} xl={3}>
-          <Button
+          <Button className={classes.footerButton}
             variant="contained"
             size="small"
             color="primary"
